@@ -2,7 +2,7 @@ package Data.Data;
 
 import java.util.ArrayList;
 
-public class Resource {
+public abstract class Resource {
     public Byte count = 0 ;
     public String code;
     public String name ;
