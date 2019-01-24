@@ -1,6 +1,6 @@
 package Data;
 
-public class Member {
+public class Member implements ToLend {
     private String name;
     private String family;
     private final String code;
@@ -56,6 +56,11 @@ public class Member {
 
     public static int getGCount() {
         return GCount;
+    }
+    public boolean borrow(String name){
+
+
+        return true;
     }
 
     public Member (String name, String family, MemberType type) throws AlphabeticException {
