@@ -1,4 +1,4 @@
-package Data;
+package Data.Data;
 
 public interface ToLend {
     int borrowDays = 14;

@@ -1,4 +1,4 @@
-package Data;
+package Data.Data;
 
 public class Member implements ToLend {
     private String name;

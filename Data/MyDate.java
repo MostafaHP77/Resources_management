@@ -1,4 +1,4 @@
-package Data;
+package Data.Data;
 
 public class MyDate {
     private byte day;
