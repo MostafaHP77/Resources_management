@@ -21,7 +21,7 @@ public class Main extends Application {
         Parent root6 = FXMLLoader.load(getClass().getResource("User Search.fxml"));
         Parent root7 = FXMLLoader.load(getClass().getResource("Lend.fxml"));
         Parent root8 = FXMLLoader.load(getClass().getResource("Return Resource.fxml"));
-        Parent root9 = FXMLLoader.load(getClass().getResource("Black List.fxml"));
+
 
         SceneManager.getInstance().addScene("page1",new Scene(root));
         SceneManager.getInstance().addScene("page2",new Scene(root2));
