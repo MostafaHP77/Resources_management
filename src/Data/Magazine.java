@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Magazine extends Resource implements Borrowable {
     private int issue;
     private MyDate date = new MyDate();
-
     public void setNumber(int number) {
         this.issue = number;
     }
@@ -23,6 +22,4 @@ public class Magazine extends Resource implements Borrowable {
         this.date = d;
 
     }
-
-
 }
