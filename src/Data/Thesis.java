@@ -1,4 +1,4 @@
-package Data.Data;
+package Data;
 
 public class Thesis extends Resource {
 

@@ -1,4 +1,4 @@
-package Data.Data;
+package Data;
 
 public class AlphabeticException extends Exception {
     public AlphabeticException(){

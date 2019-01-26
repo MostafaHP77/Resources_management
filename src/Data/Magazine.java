@@ -1,8 +1,8 @@
-package Data.Data;
+package Data;
 
 import java.util.ArrayList;
 
-public class Magazine extends Resource implements Loanperiod {
+public class Magazine extends Data.Resource implements Data.Loanperiod {
     private Byte number;
 
     public void setNumber(Byte number) {
