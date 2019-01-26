@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -17,7 +16,6 @@
             <Image url="@../Picture/o-AMERICANS-READ-BOOK-facebook.jpg" />
          </image>
       </ImageView>
-      <ChoiceBox layoutX="745.0" layoutY="101.0" prefHeight="24.0" prefWidth="168.0" />
       <Label layoutX="662.0" layoutY="100.0" prefHeight="19.0" prefWidth="110.0" text="User Type">
          <font>
             <Font size="16.0" />
@@ -45,5 +43,6 @@
             <Font size="16.0" />
          </font>
       </Label>
+      <ComboBox layoutX="746.0" layoutY="101.0" prefHeight="25.0" prefWidth="167.0" />
    </children>
 </Pane>
