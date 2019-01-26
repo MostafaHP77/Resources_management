@@ -1,6 +1,6 @@
 package Data.Data;
 
-public class Member implements ToLend {
+public class Member implements Borrowable {
     private String name;
     private String family;
     private final String code;

@@ -2,15 +2,14 @@ package Data.Data;
 
 import java.util.ArrayList;
 
-public class Resource {
+public abstract class Resource {
     public Byte count = 0 ;
     public String code;
     public String name ;
-    public String  tilte;
     public ArrayList<String> writer = new ArrayList<String>();
 
-    public void setWriter(ArrayList<String> writer) {
-        this.writer = writer;
+    public void addWriter(String writer) {
+        this.writer.add(writer);
     }
 
     public ArrayList<String> getWriter() {
