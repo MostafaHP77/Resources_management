@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="771.0" fitWidth="1080.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Picture/120619990-56a0f1983df78cafdaa6a355.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="789.0" layoutY="119.0" mnemonicParsing="false" text="Search">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ComboBox layoutX="283.0" layoutY="126.0" prefWidth="150.0" />
+      <TextField layoutX="449.0" layoutY="112.0" prefHeight="48.0" prefWidth="290.0" promptText="Enter User code">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <ListView layoutX="162.0" layoutY="182.0" prefHeight="254.0" prefWidth="715.0" />
+      <Label layoutX="165.0" layoutY="119.0" prefHeight="36.0" prefWidth="112.0" text="User Type :">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <ComboBox layoutX="290.0" layoutY="479.0" prefHeight="25.0" prefWidth="218.0" />
+      <Label layoutX="95.0" layoutY="471.0" prefHeight="19.0" prefWidth="181.0" text="Resource Type :">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <TextField layoutX="548.0" layoutY="476.0" prefHeight="36.0" prefWidth="163.0" promptText="Search" text="Resource code">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="789.0" layoutY="472.0" mnemonicParsing="false" text="Return">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="10.0" layoutY="718.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="105.0" text="Back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
