@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="755.0" layoutY="53.0" prefHeight="29.0" prefWidth="169.0" promptText="Search source name" />
       <ComboBox layoutX="321.0" layoutY="50.0" prefHeight="35.0" prefWidth="202.0" />
@@ -18,7 +17,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Label layoutX="130.0" layoutY="52.0" prefHeight="32.0" prefWidth="168.0" text="Resource Type :">
+      <Label layoutX="130.0" layoutY="52.0" prefHeight="32.0" prefWidth="168.0" text="Resource Type :" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
