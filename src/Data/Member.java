@@ -1,4 +1,4 @@
-package Data.Data;
+package Data;
 
 public class Member implements Borrowable {
     private String name;

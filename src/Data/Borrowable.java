@@ -1,4 +1,4 @@
-package Data.Data;
+package Data;
 
 public interface Borrowable {
     int borrowDays = 14;
