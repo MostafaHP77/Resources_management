@@ -31,7 +31,6 @@ public class Main extends Application {
         SceneManager.getInstance().addScene("page6",new Scene(root6));
         SceneManager.getInstance().addScene("page7",new Scene(root7));
         SceneManager.getInstance().addScene("page8",new Scene(root8));
-        SceneManager.getInstance().addScene("page9",new Scene(root9));
         SceneManager.getInstance().loadScene("page1");
         primaryStage.show();
 
