@@ -8,7 +8,7 @@ public class Controller {
 
     public void setLogin(Button login) {
         this.login = login;
-        SceneManager.getInstance().loadScene("Sample2");
+        SceneManager.getInstance().loadScene("page2");
     }
 
 }
