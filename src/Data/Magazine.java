@@ -2,7 +2,7 @@ package Data;
 
 import java.util.ArrayList;
 
-public class Magazine extends Data.Resource implements Data.Loanperiod {
+public class Magazine extends Resource implements Borrowable {
     private Byte number;
 
     public void setNumber(Byte number) {
@@ -14,4 +14,8 @@ public class Magazine extends Data.Resource implements Data.Loanperiod {
     }
 
 
+    @Override
+    public boolean borrow(String name) {
+        return false;
+    }
 }
