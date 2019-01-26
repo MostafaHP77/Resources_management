@@ -3,7 +3,7 @@ package Data;
 import java.util.ArrayList;
 
 public abstract class Resource {
-    public Byte count = 0 ;
+    public static Byte count = 0 ;
     public String code;
     public String name ;
     public ArrayList<String> writer = new ArrayList<String>();
@@ -24,12 +24,7 @@ public abstract class Resource {
         return name;
     }
 
-    public String getCode() {
+    public static String getCode() {
         return "R"+ count ;
     }
-
-
-
-
-
 }
