@@ -1,4 +1,4 @@
-package Data;
+package Data.User;
 
 public class Manager {
     private static Manager ourInstance = new Manager();

@@ -1,6 +1,8 @@
-package Data;
+package Data.Resource;
 
-public class Thesis extends Resource {
+import Data.MyDate;
+
+public class Thesis extends Resource implements Borrowable{
     private MyDate date;
     private Grade grade;
 
@@ -22,5 +24,10 @@ public class Thesis extends Resource {
         super.name = name;
         setDate(d);
         setGrade(g);
+    }
+
+    @Override
+    public boolean borrow(String name) {
+        return false;
     }
 }

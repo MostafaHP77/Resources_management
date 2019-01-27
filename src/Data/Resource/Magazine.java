@@ -1,6 +1,6 @@
-package Data;
+package Data.Resource;
 
-import java.util.ArrayList;
+import Data.MyDate;
 
 public class Magazine extends Resource implements Borrowable {
     private int issue;
