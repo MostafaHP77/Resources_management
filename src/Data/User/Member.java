@@ -1,4 +1,8 @@
-package Data;
+package Data.User;
+
+import Data.AlphabeticException;
+import Data.Resource.Borrowable;
+import Data.MyDate;
 
 public class Member implements Borrowable {
     private String name;
@@ -11,7 +15,7 @@ public class Member implements Borrowable {
     private static int SCount;
     private static int GCount;
 
-    public void setName(String name) throws AlphabeticException{
+    public void setName(String name) throws AlphabeticException {
         if(name.contains("0") || name.contains("1") || name.contains("2") || name.contains("3") || name.contains("4") || name.contains("5") || name.contains("6") || name.contains("7") || name.contains("8") || name.contains("9")) {
             throw new AlphabeticException("invalid name!!");
         }
