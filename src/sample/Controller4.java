@@ -19,7 +19,6 @@ public class Controller4 {
         fileChooser.setTitle("Open Resource File");
         Stage stage = new Stage();
         fileChooser.showOpenDialog(stage);
-        path.setText(fileChooser.getInitialFileName());
     }
 }
 

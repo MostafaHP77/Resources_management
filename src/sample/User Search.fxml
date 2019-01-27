@@ -8,25 +8,29 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
    <children>
-      <ComboBox layoutX="288.0" layoutY="39.0" prefHeight="32.0" prefWidth="156.0" />
-      <TextField layoutX="476.0" layoutY="40.0" prefHeight="32.0" prefWidth="268.0" promptText="User code">
+      <ComboBox fx:id="type" layoutX="288.0" layoutY="39.0" onAction="#setType" prefHeight="32.0" prefWidth="156.0" />
+      <TextField fx:id="usercode" layoutX="476.0" layoutY="40.0" prefHeight="32.0" prefWidth="268.0" promptText="User code">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <Button layoutX="790.0" layoutY="32.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="112.0" text="Search">
+      <Button fx:id="search" layoutX="790.0" layoutY="32.0" mnemonicParsing="false" onAction="#setSearch" prefHeight="43.0" prefWidth="112.0" text="Search">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <ListView layoutX="143.0" layoutY="123.0" prefHeight="550.0" prefWidth="774.0" />
+      <ListView fx:id="list" layoutX="143.0" layoutY="123.0" prefHeight="550.0" prefWidth="774.0" />
       <Label layoutX="152.0" layoutY="39.0" prefHeight="30.0" prefWidth="123.0" text="Person Type :">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
+      <Button fx:id="back" layoutX="18.0" layoutY="718.0" mnemonicParsing="false" onAction="#setBack" prefHeight="43.0" prefWidth="112.0" text="Back">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

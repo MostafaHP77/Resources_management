@@ -10,48 +10,47 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller7">
    <children>
       <ImageView fitHeight="768.0" fitWidth="1080.0" pickOnBounds="true">
          <image>
             <Image url="@../Picture/janko-ferlic-174927_1920x1080.jpg" />
          </image>
       </ImageView>
-      <ComboBox layoutX="312.0" layoutY="74.0" prefHeight="47.0" prefWidth="260.0" />
+      <ComboBox fx:id="resourcetype" layoutX="312.0" layoutY="74.0" onAction="#setResourcetype" prefHeight="47.0" prefWidth="260.0" />
       <Label layoutX="117.0" layoutY="75.0" prefHeight="35.0" prefWidth="185.0" text="Resource Type :" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <TextField layoutX="670.0" layoutY="73.0" prefHeight="49.0" prefWidth="163.0" promptText="Search">
+      <TextField fx:id="resourcename" layoutX="670.0" layoutY="73.0" prefHeight="49.0" prefWidth="163.0" promptText="Search">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="666.0" layoutY="157.0" prefHeight="47.0" prefWidth="168.0" promptText="Enter User code">
+      <TextField fx:id="usercode" layoutX="666.0" layoutY="157.0" prefHeight="47.0" prefWidth="168.0" promptText="Enter User code">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <Button layoutX="860.0" layoutY="80.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" text="Search">
+      <Button fx:id="search" layoutX="860.0" layoutY="80.0" mnemonicParsing="false" onAction="#setSearch" prefHeight="32.0" prefWidth="68.0" text="Search">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="861.0" layoutY="163.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" text="Lend">
+      <Button fx:id="lend" layoutX="861.0" layoutY="163.0" mnemonicParsing="false" onAction="#setLend" prefHeight="32.0" prefWidth="68.0" text="Lend">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <ComboBox layoutX="312.0" layoutY="158.0" prefHeight="47.0" prefWidth="260.0" />
+      <ComboBox fx:id="usertype" layoutX="312.0" layoutY="158.0" onAction="#setUsertype" prefHeight="47.0" prefWidth="260.0" />
       <Label layoutX="164.0" layoutY="161.0" prefHeight="36.0" prefWidth="139.0" text="User Type :" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <ListView layoutX="115.0" layoutY="248.0" prefHeight="353.0" prefWidth="892.0" style="-fx-background-color: white;" />
-      <Button layoutX="9.0" layoutY="717.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="104.0" text="Back">
+      <ListView fx:id="list" layoutX="115.0" layoutY="248.0" onEditStart="#setList" prefHeight="353.0" prefWidth="892.0" style="-fx-background-color: white;" />
+      <Button fx:id="back" layoutX="9.0" layoutY="717.0" mnemonicParsing="false" onAction="#setBack" prefHeight="37.0" prefWidth="104.0" text="Back">
          <font>
             <Font size="20.0" />
          </font>
