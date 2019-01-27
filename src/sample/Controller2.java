@@ -1,5 +1,6 @@
 package sample;
 
+
 import javafx.scene.control.Button;
 
 public class Controller2 {
@@ -11,6 +12,7 @@ public class Controller2 {
     public Button returnbook;
     public Button blacklist;
     public Button changepass;
+    public Button logout;
 
 
     public void setAdduser() {
@@ -41,5 +43,11 @@ public class Controller2 {
         SceneManager.getInstance().loadScene("page9");
     }
 
+    public void setChangepass() {
+        SceneManager.getInstance().loadScene("page10");
+    }
 
+    public void setLogout() {
+        SceneManager.getInstance().loadScene("page1");
+    }
 }

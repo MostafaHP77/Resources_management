@@ -6,54 +6,54 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
    <children>
       <ImageView fitHeight="769.0" fitWidth="1082.0" pickOnBounds="true">
          <image>
             <Image url="@../Picture/images.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="162.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Add User">
+      <Button fx:id="adduser" layoutX="162.0" layoutY="141.0" mnemonicParsing="false" onAction="#setAdduser" prefHeight="70.0" prefWidth="246.0" text="Add User">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="161.0" layoutY="301.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Resource search">
+      <Button fx:id="resourcesearch" layoutX="161.0" layoutY="301.0" mnemonicParsing="false" onAction="#setResourcesearch" prefHeight="70.0" prefWidth="246.0" text="Resource search">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="621.0" layoutY="142.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Add Resource">
+      <Button fx:id="addresource" layoutX="621.0" layoutY="142.0" mnemonicParsing="false" onAction="#setAddresource" prefHeight="70.0" prefWidth="246.0" text="Add Resource">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="161.0" layoutY="461.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Lend">
+      <Button fx:id="lend" layoutX="161.0" layoutY="461.0" mnemonicParsing="false" onAction="#setLend" prefHeight="70.0" prefWidth="246.0" text="Lend">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="27.0" layoutY="714.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="105.0" text="Logout">
+      <Button fx:id="logout" layoutX="27.0" layoutY="714.0" mnemonicParsing="false" onAction="#setLogout" prefHeight="42.0" prefWidth="105.0" text="Logout">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="619.0" layoutY="301.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="User search">
+      <Button fx:id="usersearch" layoutX="619.0" layoutY="301.0" mnemonicParsing="false" onAction="#setUsersearch" prefHeight="70.0" prefWidth="246.0" text="User search">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="619.0" layoutY="461.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Return Resource">
+      <Button fx:id="returnbook" layoutX="619.0" layoutY="461.0" mnemonicParsing="false" onAction="#setReturnbook" prefHeight="70.0" prefWidth="246.0" text="Return Resource">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="388.0" layoutY="598.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Black List">
+      <Button fx:id="blacklist" layoutX="388.0" layoutY="598.0" mnemonicParsing="false" onAction="#setBlacklist" prefHeight="70.0" prefWidth="246.0" text="Black List">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="866.0" layoutY="716.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="204.0" text="Change password">
+      <Button fx:id="changepass" layoutX="866.0" layoutY="716.0" mnemonicParsing="false" onAction="#setChangepass" prefHeight="44.0" prefWidth="204.0" text="Change password">
          <font>
             <Font size="20.0" />
          </font>

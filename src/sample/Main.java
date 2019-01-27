@@ -21,6 +21,8 @@ public class Main extends Application {
         Parent root6 = FXMLLoader.load(getClass().getResource("User Search.fxml"));
         Parent root7 = FXMLLoader.load(getClass().getResource("Lend.fxml"));
         Parent root8 = FXMLLoader.load(getClass().getResource("Return Resource.fxml"));
+        Parent root9 = FXMLLoader.load(getClass().getResource("Black List.fxml"));
+        Parent root10 = FXMLLoader.load(getClass().getResource("Change Password.fxml"));
 
 
         SceneManager.getInstance().addScene("page1",new Scene(root));
@@ -31,6 +33,8 @@ public class Main extends Application {
         SceneManager.getInstance().addScene("page6",new Scene(root6));
         SceneManager.getInstance().addScene("page7",new Scene(root7));
         SceneManager.getInstance().addScene("page8",new Scene(root8));
+        SceneManager.getInstance().addScene("page9",new Scene(root9));
+        SceneManager.getInstance().addScene("page10",new Scene(root10));
         SceneManager.getInstance().loadScene("page1");
         primaryStage.show();
 

@@ -9,40 +9,43 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
       <ImageView fitHeight="771.0" fitWidth="1080.0" pickOnBounds="true">
          <image>
             <Image url="@../Picture/o-AMERICANS-READ-BOOK-facebook.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="662.0" layoutY="100.0" prefHeight="19.0" prefWidth="110.0" text="User Type">
+      <Label layoutX="731.0" layoutY="53.0" prefHeight="37.0" prefWidth="138.0" text="User Type :" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="861.0" layoutY="38.0" prefHeight="39.0" prefWidth="184.0" promptText="family">
+      <TextField fx:id="family" layoutX="727.0" layoutY="197.0" prefHeight="39.0" prefWidth="298.0" promptText="family">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="640.0" layoutY="39.0" prefHeight="39.0" prefWidth="184.0" promptText="name">
+      <TextField fx:id="name" layoutX="725.0" layoutY="138.0" prefHeight="33.0" prefWidth="300.0" promptText="name">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label layoutX="750.0" layoutY="190.0" prefHeight="28.0" prefWidth="126.0" style="-fx-background-color: white;" textFill="WHITE" />
-      <Button layoutX="3.0" layoutY="718.0" mnemonicParsing="false" text="Back">
+      <Label fx:id="usercode" layoutX="862.0" layoutY="362.0" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: white;" textFill="WHITE" />
+      <Button fx:id="back" layoutX="3.0" layoutY="718.0" mnemonicParsing="false" onAction="#setBack" text="Back">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
-      <Button layoutX="933.0" layoutY="101.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="55.0" text="Add" />
-      <Label layoutX="661.0" layoutY="184.0" prefHeight="37.0" prefWidth="82.0" text="User code :">
+      <Button fx:id="add" layoutX="898.0" layoutY="276.0" mnemonicParsing="false" onAction="#setAdd" prefHeight="37.0" prefWidth="82.0" text="Add">
          <font>
-            <Font size="16.0" />
+            <Font size="20.0" />
+         </font></Button>
+      <Label layoutX="736.0" layoutY="371.0" prefHeight="48.0" prefWidth="119.0" text="User code :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <ComboBox layoutX="746.0" layoutY="101.0" prefHeight="25.0" prefWidth="167.0" />
+      <ComboBox fx:id="usertype" layoutX="842.0" layoutY="54.0" prefHeight="37.0" prefWidth="181.0" />
    </children>
 </Pane>
