@@ -1,9 +1,7 @@
 package Data.User;
 
 import Data.MyDate;
-import Data.Resource.Book;
-import Data.Resource.Magazine;
-import Data.Resource.Resource;
+import Data.Resource.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -73,7 +71,34 @@ public class Manager {
             }
             if(code == 't') {
                 thesises = temp.split(",", 5);
-
+                ArrayList<String> writers = new ArrayList<>();
+                writers.add(thesises[4]);
+                ArrayList<String> date = new ArrayList<>();
+                date.add(thesises[2].split("/",3)[0]);
+                date.add(thesises[2].split("/",3)[1]);
+                date.add(thesises[2].split("/",3)[2]);
+                Thesis t1 = new Thesis(thesises[1],new MyDate(Short.parseShort(date.get(2)),Short.parseShort(date.get(1)),Short.parseShort(date.get(0))),Grade.valueOf(thesises[3]),thesises[4]);
+                f2.writeChars(t1.code);
+                sb.delete(0,49);
+                sb.append(t1.getName());
+                sb.setLength(50);
+                f2.writeChars(sb.toString());
+                f2.writeShort(t1.getDate().getYear());
+                f2.writeChar('/');
+                f2.writeShort(t1.getDate().getMonth());
+                f2.writeChar('/');
+                f2.writeShort(t1.getDate().getDay());
+                f2.writeInt(t1.getGrade().hashCode());
+                f2.writeChars(t1.getWriter());
+                int i = 0;
+                sb.delete(0,49);
+                do{
+                    sb.append(writers.get(i));
+                    sb.append('/');
+                    i++;
+                } while(writers.get(i).isEmpty());
+                sb.setLength(200);
+                f2.writeChars(sb.toString());
             }
         }
         catch(FileNotFoundException e){

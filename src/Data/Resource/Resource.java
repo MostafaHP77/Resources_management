@@ -14,9 +14,6 @@ public abstract class Resource implements Borrowable {
         this.writer.add(writer);
     }
 
-    public ArrayList<String> getWriter() {
-        return writer;
-    }
 
     public void setName(String name) {
         this.name = name;
