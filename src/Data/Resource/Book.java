@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Book extends Resource implements Borrowable{
     private int releaseyear;
-
+    public static final int BOOK_LENGHT = NAME_LENGTH*2+4+4+200+2;
     public void setReleaseyear(int releaseyear) {
         this.releaseyear = releaseyear;
     }
@@ -12,9 +12,9 @@ public class Book extends Resource implements Borrowable{
         return releaseyear;
     }
     public Book(String name , int releaseYear , ArrayList<String> writers){
-        super.name = name;
+        super.setName(name);
         this.releaseyear = releaseYear;
-        super.writer = writers;
+        super.setWriter(writers);
     }
 
     @Override

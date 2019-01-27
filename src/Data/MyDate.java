@@ -1,11 +1,13 @@
 package Data;
 
+import java.util.Date;
+
 public class MyDate {
-    private byte day;
-    private byte month;
+    private short day;
+    private short month;
     private short year;
 
-    public MyDate(byte day , byte month , short year){
+    public MyDate(short day , short month , short year){
         this.day = day;
         this.month = month;
         this.year = year;
@@ -13,21 +15,21 @@ public class MyDate {
     public MyDate(){
 
     }
-    public void setDay(byte day){
+    public void setDay(short day){
         this.day = day;
     }
-    public void setMonth(byte month){
+    public void setMonth(short month){
         this.month = month;
     }
     public void setYear(short year){
         this.year = year;
     }
 
-    public byte getDay() {
+    public short getDay() {
         return day;
     }
 
-    public byte getMonth() {
+    public short getMonth() {
         return month;
     }
 

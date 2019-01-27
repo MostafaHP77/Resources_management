@@ -21,7 +21,7 @@ public class Thesis extends Resource implements Borrowable{
         this.date = date;
     }
     public Thesis(String name , MyDate d , Grade g){
-        super.name = name;
+        super.setName(name);
         setDate(d);
         setGrade(g);
     }
