@@ -5,6 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import  javafx.scene.control.TextField;
 
+
+//Change pass
+
+
 public class Controller10 {
     public TextField newpass;
     public TextField confirmpass;

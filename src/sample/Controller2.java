@@ -3,6 +3,8 @@ package sample;
 
 import javafx.scene.control.Button;
 
+//sample2
+
 public class Controller2 {
     public Button adduser;
     public Button addresource;

@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+//Add resource
+
 public class Controller3 {
     public Button add;
     public Button back;
