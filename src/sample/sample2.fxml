@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="769.0" fitWidth="1082.0" pickOnBounds="true">
@@ -34,7 +33,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="27.0" layoutY="701.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="105.0" text="Logout">
+      <Button layoutX="27.0" layoutY="714.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="105.0" text="Logout">
          <font>
             <Font size="20.0" />
          </font>
@@ -50,6 +49,11 @@
          </font>
       </Button>
       <Button layoutX="388.0" layoutY="598.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" text="Black List">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="866.0" layoutY="716.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="204.0" text="Change password">
          <font>
             <Font size="20.0" />
          </font>

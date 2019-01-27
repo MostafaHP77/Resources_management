@@ -1,14 +1,21 @@
 package sample;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class Controller {
+    @FXML
     public Button login;
+    public Button exit;
 
-
-    public void setLogin(Button login) {
-        this.login = login;
+    @FXML
+    public void setLogin() {
         SceneManager.getInstance().loadScene("page2");
+    }
+
+    @FXML
+    public void setExit(){
+        System.exit(0);
     }
 
 }

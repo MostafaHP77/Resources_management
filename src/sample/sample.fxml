@@ -11,7 +11,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="772.0" fitWidth="1088.0" layoutX="-6.0" pickOnBounds="true">
+      <ImageView fitHeight="772.0" fitWidth="1088.0" layoutX="-6.0" onDragDetected="#setLogin" pickOnBounds="true">
          <image>
             <Image url="@../Picture/Library.jpg" />
          </image>
@@ -34,7 +34,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Button layoutX="28.0" layoutY="710.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="119.0" text="Exit">
+      <Button fx:id="exit" layoutX="28.0" layoutY="710.0" mnemonicParsing="false" onAction="#setExit" prefHeight="46.0" prefWidth="119.0" text="Exit">
          <font>
             <Font size="22.0" />
          </font>
