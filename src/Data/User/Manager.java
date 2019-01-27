@@ -36,17 +36,17 @@ public class Manager {
     }
 
     public static void addResourcesInfo(File f){
-        String temp ;
+        String temp;
         String[] books = new String[4];
         String[] magazines = new String[4];
         String[] thesises = new String[5];
         StringBuilder sb = new StringBuilder();
-        char code ;
+        char code;
         try {
             BufferedReader br1 = new BufferedReader(new FileReader(f));
             while (true) {
                 temp = br1.readLine();
-                if(temp.isEmpty()) {
+                if (temp.isEmpty()) {
                     break;
                 }
                 code = temp.charAt(0);
@@ -124,17 +124,16 @@ public class Manager {
                     f2.close();
                 }
             }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        catch(FileNotFoundException e){
-                e.printStackTrace();
-            }
-        catch(IOException e){
-                e.printStackTrace();
-            }
     }
     public void addUsersInfo(File f){
         
     }
+
     private Manager() {
     }
-}
+    }

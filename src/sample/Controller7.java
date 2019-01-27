@@ -5,6 +5,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+//Lend
+
 public class Controller7 {
     public Button back;
     public Button lend;
