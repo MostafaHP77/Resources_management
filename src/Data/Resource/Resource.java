@@ -25,6 +25,9 @@ public abstract class Resource implements Borrowable {
     public Status getStatus(){
         return this.state;
     }
+    public void setState(Status state){
+        this.state = state;
+    }
     public static String getCode() {
         return "R"+ count ;
     }

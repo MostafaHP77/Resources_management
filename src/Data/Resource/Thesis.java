@@ -6,7 +6,7 @@ public class Thesis extends Resource implements Borrowable{
     private MyDate date;
     private Grade grade;
     private String Writer;
-    public static final int THESIS_LENGTH = NAME_LENGTH*2 + 4 + 8*2 + 4 + 200;
+    public static final int THESIS_LENGTH = NAME_LENGTH*2 + 4 + 8*2 + 4 + 200 + 4;
 
     public void setGrade(Grade g){
         this.grade = g;

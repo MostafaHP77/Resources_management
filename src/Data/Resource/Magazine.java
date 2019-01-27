@@ -4,7 +4,7 @@ import Data.MyDate;
 
 public class Magazine extends Resource implements Borrowable {
     private int issue;
-    public static final int MAGAZINE_LENGTH = NAME_LENGTH * 2 +4+4+10;
+    public static final int MAGAZINE_LENGTH = NAME_LENGTH * 2 +4+4+10+4;
     private MyDate date = new MyDate();
     public void setNumber(int number) {
         this.issue = number;

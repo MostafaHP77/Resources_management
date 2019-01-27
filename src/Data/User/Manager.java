@@ -12,6 +12,7 @@ public class Manager {
     private ArrayList<Book> book = new ArrayList<>();
     private ArrayList<Magazine> magazine = new ArrayList<>();
     private ArrayList<Thesis> thesis = new ArrayList<>();
+    private ArrayList<Member> member = new ArrayList<>();
     public static Manager getInstance() {
         return ourInstance;
     }
@@ -34,7 +35,7 @@ public class Manager {
         return thesis;
     }
 
-    public static boolean addResourcesInfo(File f , RandomAccessFile f2){
+    public static void addResourcesInfo(File f){
         String temp ;
         String[] books = new String[4];
         String[] magazines = new String[4];
@@ -55,6 +56,7 @@ public class Manager {
                     writers.add(books[3]);
                     Book b1 = new Book(books[1], Integer.parseInt(books[2]), writers);
                     Manager.getInstance().getBook().add(b1);
+                    RandomAccessFile f2 = new RandomAccessFile("books.bin","rw");
                     f2.writeChars(b1.code);
                     sb.append(books[1]);
                     sb.setLength(Resource.NAME_LENGTH);
@@ -69,6 +71,8 @@ public class Manager {
                     } while (writers.get(i) == null);
                     sb.setLength(200);
                     f2.writeChars(sb.toString());
+                    f2.writeInt(b1.getStatus().hashCode());
+                    f2.close();
                 }
                 if (code == 'm') {
                     magazines = temp.split(",", 4);
@@ -78,6 +82,7 @@ public class Manager {
                     date.add(magazines[2].split("/", 3)[2]);
                     Magazine m1 = new Magazine(magazines[1], Integer.parseInt(magazines[3]), new MyDate(Short.parseShort(date.get(2)), Short.parseShort(date.get(1)), Short.parseShort(date.get(0))));
                     Manager.getInstance().getMagazine().add(m1);
+                    RandomAccessFile f2 = new RandomAccessFile("mgazines.bin","rw");
                     f2.writeChars(m1.code);
                     sb.delete(0, 49);
                     sb.append(m1.getName());
@@ -89,6 +94,8 @@ public class Manager {
                     f2.writeChar('/');
                     f2.writeShort(m1.getDate().getDay());
                     f2.writeInt(m1.getNumber());
+                    f2.writeInt(m1.getStatus().hashCode());
+                    f2.close();
                 }
                 if (code == 't') {
                     thesises = temp.split(",", 5);
@@ -100,6 +107,7 @@ public class Manager {
                     date.add(thesises[2].split("/", 3)[2]);
                     Thesis t1 = new Thesis(thesises[1], new MyDate(Short.parseShort(date.get(2)), Short.parseShort(date.get(1)), Short.parseShort(date.get(0))), Grade.valueOf(thesises[3]), thesises[4]);
                     Manager.getInstance().getThesis().add(t1);
+                    RandomAccessFile f2 = new RandomAccessFile("thesises.bin","rw");
                     f2.writeChars(t1.code);
                     sb.delete(0, 49);
                     sb.append(t1.getName());
@@ -112,6 +120,8 @@ public class Manager {
                     f2.writeShort(t1.getDate().getDay());
                     f2.writeInt(t1.getGrade().hashCode());
                     f2.writeChars(t1.getWriter());
+                    f2.writeInt(t1.getStatus().hashCode());
+                    f2.close();
                 }
             }
         }
@@ -121,17 +131,10 @@ public class Manager {
         catch(IOException e){
                 e.printStackTrace();
             }
-        finally{
-                try {
-                    f2.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return true;
     }
-
+    public void addUsersInfo(File f){
+        
+    }
     private Manager() {
     }
 }
