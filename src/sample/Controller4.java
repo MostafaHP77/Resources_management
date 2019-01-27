@@ -8,10 +8,15 @@ import javafx.stage.Stage;
 public class Controller4 {
     public Button browse;
     public Button add;
+    public Button back;
     public TextField path;
 
     public void setAdd() {
 
+    }
+
+    public void setBack() {
+        SceneManager.getInstance().loadScene("page2");
     }
 
     public void setBrowse() {

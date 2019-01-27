@@ -25,5 +25,10 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <Button fx:id="back" layoutX="24.0" layoutY="710.0" mnemonicParsing="false" onAction="#setBack" prefHeight="48.0" prefWidth="115.0" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
