@@ -16,12 +16,12 @@
             <Image url="@../Picture/Library.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="421.0" layoutY="360.0" prefHeight="50.0" prefWidth="258.0" promptText="Password">
+      <TextField fx:id="pass" layoutX="421.0" layoutY="360.0" prefHeight="50.0" prefWidth="258.0" promptText="Password">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <Button fx:id="login" layoutX="500.0" layoutY="444.0" mnemonicParsing="false" onAction="#setLogin" prefHeight="35.0" prefWidth="93.0" text="Login">
+      <Button fx:id="login" layoutX="500.0" layoutY="474.0" mnemonicParsing="false" onAction="#setLogin" prefHeight="35.0" prefWidth="93.0" text="Login">
          <font>
             <Font size="15.0" />
          </font>
@@ -39,5 +39,13 @@
             <Font size="22.0" />
          </font>
       </Button>
+      <Label fx:id="error" layoutX="440.0" layoutY="305.0" prefHeight="36.0" prefWidth="225.0" text="Password incorrect!" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow height="23.38" radius="24.2975" spread="0.36" width="75.81" />
+         </effect>
+      </Label>
    </children>
 </Pane>

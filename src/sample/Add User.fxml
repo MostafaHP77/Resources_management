@@ -21,31 +21,22 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="family" layoutX="727.0" layoutY="197.0" prefHeight="39.0" prefWidth="298.0" promptText="family">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="name" layoutX="725.0" layoutY="138.0" prefHeight="33.0" prefWidth="300.0" promptText="name">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <Label fx:id="usercode" layoutX="862.0" layoutY="362.0" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: white;" textFill="WHITE" />
       <Button fx:id="back" layoutX="3.0" layoutY="718.0" mnemonicParsing="false" onAction="#setBack" text="Back">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
-      <Button fx:id="add" layoutX="898.0" layoutY="276.0" mnemonicParsing="false" onAction="#setAdd" prefHeight="37.0" prefWidth="82.0" text="Add">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Label layoutX="736.0" layoutY="371.0" prefHeight="48.0" prefWidth="119.0" text="User code :" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
       <ComboBox fx:id="usertype" layoutX="842.0" layoutY="54.0" prefHeight="37.0" prefWidth="181.0" />
+      <Button fx:id="browse" layoutX="619.0" layoutY="127.0" mnemonicParsing="false" onAction="#setBrowse" text="Browse">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="path" layoutX="719.0" layoutY="127.0" onAction="#setBrowse" prefHeight="38.0" prefWidth="353.0" />
+      <Button layoutX="838.0" layoutY="197.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="115.0" text="Add">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

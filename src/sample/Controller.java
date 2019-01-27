@@ -1,22 +1,48 @@
 package sample;
 
+import Data.User.Manager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller {
     @FXML
     public Button login;
     public Button exit;
+    public Label error;
+    public TextField pass;
 
     @FXML
+
+
     public void setLogin() {
-        SceneManager.getInstance().loadScene("page2");
+
+        if(Manager.getInstance().getPass().equals(pass.getText())){
+            SceneManager.getInstance().loadScene("page2");
+            error.setVisible(false);
+            pass.clear();
+        }
+
+        else if (pass.getText()==null){
+            error.setVisible(true);
+            pass.clear();
+
+        }
+        else{
+            error.setVisible(true);
+            pass.clear();
+        }
+
+
+
     }
 
-    @FXML
     public void setExit(){
         System.exit(0);
     }
+
+
 
 
 
