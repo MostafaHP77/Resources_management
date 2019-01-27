@@ -20,6 +20,5 @@ public class Magazine extends Resource implements Borrowable {
         super.name = name;
         this.issue = issue;
         this.date = d;
-
     }
 }
