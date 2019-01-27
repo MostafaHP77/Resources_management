@@ -10,15 +10,29 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//        primaryStage.setTitle("Hello World");
-//        primaryStage.setScene(new Scene(root, 300, 275));
-//        primaryStage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("Resource Management");
+        SceneManager.getInstance().setStage(primaryStage);
 
-    }
+        Parent root2 = FXMLLoader.load(getClass().getResource("sample2.fxml"));
+        Parent root3 = FXMLLoader.load(getClass().getResource("Add User.fxml"));
+        Parent root4 = FXMLLoader.load(getClass().getResource("Add Resource.fxml"));
+        Parent root5 = FXMLLoader.load(getClass().getResource("Resource Search.fxml"));
+        Parent root6 = FXMLLoader.load(getClass().getResource("User Search.fxml"));
+        Parent root7 = FXMLLoader.load(getClass().getResource("Lend.fxml"));
+        Parent root8 = FXMLLoader.load(getClass().getResource("Return Resource.fxml"));
 
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-}
+        SceneManager.getInstance().addScene("page1",new Scene(root));
+        SceneManager.getInstance().addScene("page2",new Scene(root2));
+        SceneManager.getInstance().addScene("page3",new Scene(root3));
+        SceneManager.getInstance().addScene("page4",new Scene(root4));
+        SceneManager.getInstance().addScene("page5",new Scene(root5));
+        SceneManager.getInstance().addScene("page6",new Scene(root6));
+        SceneManager.getInstance().addScene("page7",new Scene(root7));
+        SceneManager.getInstance().addScene("page8",new Scene(root8));
+        SceneManager.getInstance().loadScene("page1");
+        primaryStage.show();
+
+
+    }}
