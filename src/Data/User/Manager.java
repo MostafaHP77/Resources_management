@@ -34,18 +34,18 @@ public class Manager {
         return thesis;
     }
 
-    public static boolean addResourcesInfo(File f , RandomAccessFile f2){
-        String temp ;
+    public static boolean addResourcesInfo(File f , RandomAccessFile f2) {
+        String temp;
         String[] books = new String[4];
         String[] magazines = new String[4];
         String[] thesises = new String[5];
         StringBuilder sb = new StringBuilder();
-        char code ;
+        char code;
         try {
             BufferedReader br1 = new BufferedReader(new FileReader(f));
             while (true) {
                 temp = br1.readLine();
-                if(temp.isEmpty()) {
+                if (temp.isEmpty()) {
                     break;
                 }
                 code = temp.charAt(0);
@@ -114,24 +114,21 @@ public class Manager {
                     f2.writeChars(t1.getWriter());
                 }
             }
-        }
-        catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                f2.close();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-        catch(IOException e){
-                e.printStackTrace();
-            }
-        finally{
-                try {
-                    f2.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
+
         return true;
     }
-
-    private Manager() {
+        private Manager() {
     }
-}
+
+    }
