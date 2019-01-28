@@ -223,8 +223,59 @@ public class Manager {
             e.printStackTrace();
         }
     }
-    public boolean borrow(){
-        
+    public boolean checkStatus(File f , String code){
+        StringBuilder sb = new StringBuilder();
+        sb.append(code.charAt(1));
+        int cd = Integer.parseInt(sb.toString());
+        try{
+            RandomAccessFile f1 = new RandomAccessFile(f,"rw");
+            switch(code.charAt(0)){
+                case 'b':
+                    f1.seek(Book.BOOK_LENGHT*(cd)-4);
+                    int st = f1.readInt();
+                    if(Status.exist.hashCode() == st){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                case 'm':
+                    f1.seek(Magazine.MAGAZINE_LENGTH*(cd)-4);
+                    int st2 = f1.readInt();
+                    if(Status.exist.hashCode() == st2){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                case 't':
+                    f1.seek(Thesis.THESIS_LENGTH*(cd)-4);
+                    int st3 = f1.readInt();
+                    if(Status.exist.hashCode() == st3){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+            }
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        finally {
+            return false;
+        }
+    }
+    public boolean borrow(File mf , File rf , String mCode , String rCode){
+        boolean check ;
+        check = checkStatus(mf , mCode);
+        if (check == true){
+            
+        }
+        if (check == false){
+
+        }
+        return true;
     }
     private Manager(){
         }
