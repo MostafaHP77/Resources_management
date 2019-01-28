@@ -3,7 +3,7 @@ package Data.Resource;
 import java.util.ArrayList;
 
 public abstract class Resource implements Borrowable {
-    private static Byte count = 0 ;
+    public static Byte count = 0 ;
     public static final int NAME_LENGTH = 50;
     public String code;
     private String name ;
@@ -28,8 +28,8 @@ public abstract class Resource implements Borrowable {
     public void setState(Status state){
         this.state = state;
     }
-    public static String getCode() {
-        return "R"+ count ;
+    public  String getCode() {
+        return this.code ;
     }
 
     public void setWriter(ArrayList<String> writer) {

@@ -15,6 +15,8 @@ public class Book extends Resource implements Borrowable{
         super.setName(name);
         this.releaseyear = releaseYear;
         super.setWriter(writers);
+        this.code = 'R'+ count.toString();
+        count ++;
     }
 
     @Override

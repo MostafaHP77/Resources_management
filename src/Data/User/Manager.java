@@ -13,13 +13,16 @@ public class Manager {
     private ArrayList<Magazine> magazine = new ArrayList<>();
     private ArrayList<Thesis> thesis = new ArrayList<>();
     private ArrayList<Member> member = new ArrayList<>();
+
     public static Manager getInstance() {
         return ourInstance;
     }
-    public String getPass(){
+
+    public String getPass() {
         return this.password;
     }
-    public void setPass(String pass){
+
+    public void setPass(String pass) {
         this.password = pass;
     }
 
@@ -35,7 +38,7 @@ public class Manager {
         return thesis;
     }
 
-    public void addResourcesInfo(File f){
+    public void addResourcesInfo(File f) {
         String temp;
         String[] books = new String[4];
         String[] magazines = new String[4];
@@ -56,7 +59,7 @@ public class Manager {
                     writers.add(books[3]);
                     Book b1 = new Book(books[1], Integer.parseInt(books[2]), writers);
                     Manager.getInstance().getBook().add(b1);
-                    RandomAccessFile f2 = new RandomAccessFile("books.bin","rw");
+                    RandomAccessFile f2 = new RandomAccessFile("books.bin", "rw");
                     f2.writeChars(b1.code);
                     sb.append(books[1]);
                     sb.setLength(Resource.NAME_LENGTH);
@@ -82,7 +85,7 @@ public class Manager {
                     date.add(magazines[2].split("/", 3)[2]);
                     Magazine m1 = new Magazine(magazines[1], Integer.parseInt(magazines[3]), new MyDate(Short.parseShort(date.get(2)), Short.parseShort(date.get(1)), Short.parseShort(date.get(0))));
                     Manager.getInstance().getMagazine().add(m1);
-                    RandomAccessFile f2 = new RandomAccessFile("mgazines.bin","rw");
+                    RandomAccessFile f2 = new RandomAccessFile("mgazines.bin", "rw");
                     f2.writeChars(m1.code);
                     sb.delete(0, 49);
                     sb.append(m1.getName());
@@ -107,7 +110,7 @@ public class Manager {
                     date.add(thesises[2].split("/", 3)[2]);
                     Thesis t1 = new Thesis(thesises[1], new MyDate(Short.parseShort(date.get(2)), Short.parseShort(date.get(1)), Short.parseShort(date.get(0))), Grade.valueOf(thesises[3]), thesises[4]);
                     Manager.getInstance().getThesis().add(t1);
-                    RandomAccessFile f2 = new RandomAccessFile("thesises.bin","rw");
+                    RandomAccessFile f2 = new RandomAccessFile("thesises.bin", "rw");
                     f2.writeChars(t1.code);
                     sb.delete(0, 49);
                     sb.append(t1.getName());
@@ -130,10 +133,33 @@ public class Manager {
             e.printStackTrace();
         }
     }
-    public void addUsersInfo(File f){
-        
-    }
 
-    private Manager() {
+    public void addUsersInfo(File f) {
+        String temp;
+        char code;
+        try {
+            BufferedReader br1 = new BufferedReader(new FileReader(f));
+            while (true) {
+                temp = br1.readLine();
+                code = temp.charAt(0);
+                switch (code) {
+                    case ('l'):
+
+                        break;
+                    case('s'):
+
+                        break;
+                    case('g'):
+
+                        break;
+
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+    private Manager(){
+        }
     }
+}
