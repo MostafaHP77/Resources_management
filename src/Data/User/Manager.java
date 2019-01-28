@@ -270,7 +270,7 @@ public class Manager {
         boolean check ;
         check = checkStatus(mf , mCode);
         if (check == true){
-            
+
         }
         if (check == false){
 
@@ -279,4 +279,5 @@ public class Manager {
     }
     private Manager(){
         }
+         
     }
