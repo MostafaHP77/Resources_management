@@ -136,11 +136,15 @@ public class Manager {
 
     public void addUsersInfo(File f) {
         String temp;
+        String name;
+        String family;
+        int type;
         char code;
         try {
             BufferedReader br1 = new BufferedReader(new FileReader(f));
             while (true) {
                 temp = br1.readLine();
+                
                 code = temp.charAt(0);
                 switch (code) {
                     case ('l'):
