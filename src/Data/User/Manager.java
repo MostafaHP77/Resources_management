@@ -266,18 +266,30 @@ public class Manager {
             return false;
         }
     }
+    public boolean checkMember(File f , String code){
+        StringBuilder sb = new StringBuilder();
+        sb.append(code.charAt(1));
+        int cd = Integer.parseInt(sb.toString());
+        try {
+            RandomAccessFile f1 = new RandomAccessFile(f, "rw");
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
     public boolean borrow(File mf , File rf , String mCode , String rCode){
         boolean check ;
         check = checkStatus(mf , mCode);
-        if (check == true){
+        if (check ){
 
         }
-        if (check == false){
-
+        else{
+            return false;
         }
         return true;
     }
     private Manager(){
         }
-         
+
     }
