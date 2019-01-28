@@ -4,10 +4,16 @@ import Data.AlphabeticException;
 import Data.Resource.Borrowable;
 import Data.MyDate;
 
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.Date;
+
 public class Member implements Borrowable {
     private String name;
     private String family;
     private final String code;
+    public static final int NAME_LENGTH = 50;
+    public static final int MEMBER_LENGTH = NAME_LENGTH*4 + 4 + 10;
     private MyDate membershipDate;
     private MemberType type;
     private static int MemberCount;
@@ -86,11 +92,19 @@ public class Member implements Borrowable {
             this.code = type.toString().concat(Integer.toString(GCount));
         }
         this.type = type;
-        /**
-         * bayad membershipDate ham meghdardehi shavad
-         */
+        Date d = new Date();
+        this.membershipDate = new MyDate((short)d.getDate(),(short)d.getMonth(),(short)d.getYear());
     }
     public Member(){
         this.code = "l1";
+    }
+    public static void main(String[] args){
+        try {
+            RandomAccessFile rr1 = new RandomAccessFile("E:/data.bin", "rw");
+            rr1.writeInt(3);
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 }

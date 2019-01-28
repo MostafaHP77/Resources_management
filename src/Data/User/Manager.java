@@ -1,10 +1,12 @@
 package Data.User;
 
+import Data.AlphabeticException;
 import Data.MyDate;
 import Data.Resource.*;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Manager {
     private static Manager ourInstance = new Manager();
@@ -136,34 +138,94 @@ public class Manager {
 
     public void addUsersInfo(File f) {
         String temp;
+        String[] line = new String[3];
         String name;
         String family;
-        int type;
+        ArrayList<Member> member = new ArrayList<>();
         char code;
         try {
             BufferedReader br1 = new BufferedReader(new FileReader(f));
             while (true) {
                 temp = br1.readLine();
-                
+                line = temp.split(",",3);
+                name = line[1];
+                family = line[2];
                 code = temp.charAt(0);
+                StringBuilder sb = new StringBuilder();
                 switch (code) {
                     case ('l'):
-
+                        Member m1 = new Member(name,family,MemberType.L);
+                        member.add(m1);
+                        RandomAccessFile random = new RandomAccessFile("matesrs.bin","rw");
+                        random.writeChars(m1.getCode());
+                        sb.delete(0,49);
+                        sb.append(m1.getName());
+                        sb.setLength(50);
+                        random.writeChars(sb.toString());
+                        sb.delete(0,49);
+                        sb.append(family);
+                        sb.setLength(50);
+                        random.writeChars(sb.toString());
+                        Date date = new Date();
+                        random.writeInt(date.getYear()+1900);
+                        random.writeChar('/');
+                        random.writeInt(date.getMonth()+1);
+                        random.writeChar('/');
+                        random.writeInt(date.getDate());
                         break;
                     case('s'):
+                        Member m2 = new Member(name,family,MemberType.L);
+                        member.add(m2);
+                        RandomAccessFile random2 = new RandomAccessFile("students.bin","rw");
+                        random2.writeChars(m2.getCode());
+                        sb.delete(0,49);
+                        sb.append(m2.getName());
+                        sb.setLength(50);
+                        random2.writeChars(sb.toString());
+                        sb.delete(0,49);
+                        sb.append(family);
+                        sb.setLength(50);
+                        random2.writeChars(sb.toString());
+                        Date date2 = new Date();
+                        random2.writeInt(date2.getYear()+1900);
+                        random2.writeChar('/');
+                        random2.writeInt(date2.getMonth()+1);
+                        random2.writeChar('/');
+                        random2.writeInt(date2.getDate());
 
                         break;
                     case('g'):
-
+                        Member m3 = new Member(name,family,MemberType.L);
+                        member.add(m3);
+                        RandomAccessFile random3 = new RandomAccessFile("guests.bin","rw");
+                        random3.writeChars(m3.getCode());
+                        sb.delete(0,49);
+                        sb.append(m3.getName());
+                        sb.setLength(50);
+                        random3.writeChars(sb.toString());
+                        sb.delete(0,49);
+                        sb.append(family);
+                        sb.setLength(50);
+                        random3.writeChars(sb.toString());
+                        Date date3 = new Date();
+                        random3.writeInt(date3.getYear()+1900);
+                        random3.writeChar('/');
+                        random3.writeInt(date3.getMonth()+1);
+                        random3.writeChar('/');
+                        random3.writeInt(date3.getDate());
                         break;
-
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        catch(AlphabeticException e) {
+            e.printStackTrace();
+        }
+    }
+    public boolean borrow(){
+        
     }
     private Manager(){
         }
     }
-}
