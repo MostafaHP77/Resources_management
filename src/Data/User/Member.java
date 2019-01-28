@@ -13,9 +13,10 @@ public class Member implements Borrowable {
     private String family;
     private final String code;
     public static final int NAME_LENGTH = 50;
-    public static final int MEMBER_LENGTH = NAME_LENGTH*4 + 4 + 10;
+    public static final int MEMBER_LENGTH = NAME_LENGTH*4 + 4 + 10 + 4;
     private MyDate membershipDate;
     private MemberType type;
+    private  MemberStatus state = MemberStatus.ok;
     private static int MemberCount;
     private static int LCount;
     private static int SCount;

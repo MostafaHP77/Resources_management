@@ -40,7 +40,7 @@ public class Manager {
         return thesis;
     }
 
-    public void addResourcesInfo(File f) {
+    public void addResourcesInfo(File f) {//baraye dadan adress yek file vabaznevisi an dar fileh binary
         String temp;
         String[] books = new String[4];
         String[] magazines = new String[4];
@@ -136,7 +136,7 @@ public class Manager {
         }
     }
 
-    public void addUsersInfo(File f) {
+    public void addUsersInfo(File f) {//baraye nvshtn ettelaat aaza dar file binary
         String temp;
         String[] line = new String[3];
         String name;
@@ -147,70 +147,70 @@ public class Manager {
             BufferedReader br1 = new BufferedReader(new FileReader(f));
             while (true) {
                 temp = br1.readLine();
-                line = temp.split(",",3);
+                line = temp.split(",", 3);
                 name = line[1];
                 family = line[2];
                 code = temp.charAt(0);
                 StringBuilder sb = new StringBuilder();
                 switch (code) {
                     case ('l'):
-                        Member m1 = new Member(name,family,MemberType.L);
+                        Member m1 = new Member(name, family, MemberType.L);
                         member.add(m1);
-                        RandomAccessFile random = new RandomAccessFile("matesrs.bin","rw");
+                        RandomAccessFile random = new RandomAccessFile("matesrs.bin", "rw");
                         random.writeChars(m1.getCode());
-                        sb.delete(0,49);
+                        sb.delete(0, 49);
                         sb.append(m1.getName());
                         sb.setLength(50);
                         random.writeChars(sb.toString());
-                        sb.delete(0,49);
+                        sb.delete(0, 49);
                         sb.append(family);
                         sb.setLength(50);
                         random.writeChars(sb.toString());
                         Date date = new Date();
-                        random.writeInt(date.getYear()+1900);
+                        random.writeInt(date.getYear() + 1900);
                         random.writeChar('/');
-                        random.writeInt(date.getMonth()+1);
+                        random.writeInt(date.getMonth() + 1);
                         random.writeChar('/');
                         random.writeInt(date.getDate());
                         break;
-                    case('s'):
-                        Member m2 = new Member(name,family,MemberType.L);
+                    case ('s'):
+                        Member m2 = new Member(name, family, MemberType.L);
                         member.add(m2);
-                        RandomAccessFile random2 = new RandomAccessFile("students.bin","rw");
+                        RandomAccessFile random2 = new RandomAccessFile("students.bin", "rw");
                         random2.writeChars(m2.getCode());
-                        sb.delete(0,49);
+                        sb.delete(0, 49);
                         sb.append(m2.getName());
                         sb.setLength(50);
                         random2.writeChars(sb.toString());
-                        sb.delete(0,49);
+                        sb.delete(0, 49);
                         sb.append(family);
                         sb.setLength(50);
                         random2.writeChars(sb.toString());
                         Date date2 = new Date();
-                        random2.writeInt(date2.getYear()+1900);
+                        random2.writeInt(date2.getYear() + 1900);
                         random2.writeChar('/');
-                        random2.writeInt(date2.getMonth()+1);
+                        random2.writeInt(date2.getMonth() + 1);
                         random2.writeChar('/');
                         random2.writeInt(date2.getDate());
 
                         break;
-                    case('g'):
-                        Member m3 = new Member(name,family,MemberType.L);
+                    case ('g'):
+                        Member m3 = new Member(name, family, MemberType.L);
                         member.add(m3);
-                        RandomAccessFile random3 = new RandomAccessFile("guests.bin","rw");
+                        RandomAccessFile random3 = new RandomAccessFile("guests.bin", "rw");
                         random3.writeChars(m3.getCode());
-                        sb.delete(0,49);
+                        sb.delete(0, 49);
                         sb.append(m3.getName());
                         sb.setLength(50);
                         random3.writeChars(sb.toString());
-                        sb.delete(0,49);
+                        sb.delete(0, 49);
                         sb.append(family);
                         sb.setLength(50);
                         random3.writeChars(sb.toString());
                         Date date3 = new Date();
-                        random3.writeInt(date3.getYear()+1900);
+                        random3.writeInt(date3.getYear() + 1900);
                         random3.writeChar('/');
-                        random3.writeInt(date3.getMonth()+1);
+                        random3.writeInt(date3.getMonth() + 1);
                         random3.writeChar('/');
                         random3.writeInt(date3.getDate());
                         break;
@@ -218,76 +218,141 @@ public class Manager {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        catch(AlphabeticException e) {
+        } catch (AlphabeticException e) {
             e.printStackTrace();
         }
     }
-    public boolean checkStatus(File f , String code){
-        StringBuilder sb = new StringBuilder();
-        sb.append(code.charAt(1));
-        int cd = Integer.parseInt(sb.toString());
-        try{
-            RandomAccessFile f1 = new RandomAccessFile(f,"rw");
-            switch(code.charAt(0)){
-                case 'b':
-                    f1.seek(Book.BOOK_LENGHT*(cd)-4);
-                    int st = f1.readInt();
-                    if(Status.exist.hashCode() == st){
-                        return true;
-                    }
-                    else{
-                        return false;
-                    }
-                case 'm':
-                    f1.seek(Magazine.MAGAZINE_LENGTH*(cd)-4);
-                    int st2 = f1.readInt();
-                    if(Status.exist.hashCode() == st2){
-                        return true;
-                    }
-                    else{
-                        return false;
-                    }
-                case 't':
-                    f1.seek(Thesis.THESIS_LENGTH*(cd)-4);
-                    int st3 = f1.readInt();
-                    if(Status.exist.hashCode() == st3){
-                        return true;
-                    }
-                    else{
-                        return false;
-                    }
-            }
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-        finally {
-            return false;
-        }
-    }
-    public boolean checkMember(File f , String code){
+
+    public boolean checkStatus(File f, String code) {//check kardan dar amanat boodan ketab ya nboodn an
         StringBuilder sb = new StringBuilder();
         sb.append(code.charAt(1));
         int cd = Integer.parseInt(sb.toString());
         try {
             RandomAccessFile f1 = new RandomAccessFile(f, "rw");
-            
-        }
-        catch(IOException e){
+            switch (code.charAt(0)) {
+                case 'b':
+                    f1.seek(Book.BOOK_LENGHT * (cd) - 4);
+                    int st = f1.readInt();
+                    if (Status.exist.hashCode() == st) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                case 'm':
+                    f1.seek(Magazine.MAGAZINE_LENGTH * (cd) - 4);
+                    int st2 = f1.readInt();
+                    if (Status.exist.hashCode() == st2) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                case 't':
+                    f1.seek(Thesis.THESIS_LENGTH * (cd) - 4);
+                    int st3 = f1.readInt();
+                    if (Status.exist.hashCode() == st3) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+            }
+        } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            return false;
+        }
+    }
+
+    public boolean checkMember(String code) {//baraye check kardan har ozv ke dar blackList nbashd
+        StringBuilder sb = new StringBuilder();
+        sb.append(code.charAt(1));
+        int cd = Integer.parseInt(sb.toString());
+        try {
+            switch (code.charAt(0)) {
+                case 'l':
+                    RandomAccessFile f1 = new RandomAccessFile("masters.bin", "rw");
+                    f1.seek(Member.MEMBER_LENGTH * (cd) - 4);
+                    int st = f1.readInt();
+                    if (MemberStatus.ok.hashCode() == st) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                case 's':
+                    RandomAccessFile f2 = new RandomAccessFile("students.bin", "rw");
+                    f2.seek(Member.MEMBER_LENGTH * (cd) - 4);
+                    int st2 = f2.readInt();
+                    if (MemberStatus.ok.hashCode() == st2) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                case 'g':
+                    RandomAccessFile f3 = new RandomAccessFile("guests.bin", "rw");
+                    f3.seek(Member.MEMBER_LENGTH * (cd) - 4);
+                    int st3 = f3.readInt();
+                    if (MemberStatus.ok.hashCode() == st3) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            return false;
         }
     }
     public boolean borrow(File mf , File rf , String mCode , String rCode){
-        boolean check ;
-        check = checkStatus(mf , mCode);
+        boolean check , check2;
+        check = checkStatus(rf , rCode);
         if (check ){
-
+            check2 = checkMember(mCode);
+            try {
+                if (check2) {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(rCode.charAt(1));
+                    int cd = Integer.parseInt(sb.toString());
+                    RandomAccessFile r1 = new RandomAccessFile(rf, "rw");
+                    switch (mCode.charAt(0)) {
+                        case 'b':
+                            r1.seek(Book.BOOK_LENGHT * (cd) - 4);
+                            r1.writeInt(Status.lent.hashCode());
+                        case 'm':
+                            r1.seek(Magazine.MAGAZINE_LENGTH * (cd) - 4);
+                            r1.writeInt(Status.lent.hashCode());
+                        case 't':
+                            r1.seek(Thesis.THESIS_LENGTH * (cd) - 4);
+                            r1.writeInt(Status.lent.hashCode());
+                    }
+                }
+                else {
+                    return false;
+                }
+            }
+            catch(IOException e){
+                e.printStackTrace();
+            }
         }
         else{
             return false;
         }
         return true;
+    }
+    public ArrayList<Resource> resourceSearch(String name){
+        ArrayList<Resource> result = new ArrayList<>();
+        try {
+            RandomAccessFile r1 = new RandomAccessFile("books.bin","rw");
+            RandomAccessFile r2 = new RandomAccessFile("magazines.bin","rw");
+            RandomAccessFile r3 = new RandomAccessFile("thesises.bin","rw");
+            while (true) {
+                r1.seek(4);
+                //String s = r1.read
+            }
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        return result;
     }
     private Manager(){
         }
