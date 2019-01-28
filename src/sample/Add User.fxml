@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="771.0" fitWidth="1080.0" pickOnBounds="true">
          <image>
-            <Image url="@../Picture/o-AMERICANS-READ-BOOK-facebook.jpg" />
+            <Image url="@../Picture/manchester-city-f.c.-wallpapers-31191-1954757.jpg" />
          </image>
       </ImageView>
       <Button fx:id="back" layoutX="3.0" layoutY="718.0" mnemonicParsing="false" onAction="#setBack" text="Back">
@@ -19,13 +19,13 @@
             <Font size="23.0" />
          </font>
       </Button>
-      <Button fx:id="browse" layoutX="619.0" layoutY="127.0" mnemonicParsing="false" onAction="#setBrowse" text="Browse">
+      <Button fx:id="browse" layoutX="601.0" layoutY="42.0" mnemonicParsing="false" onAction="#setBrowse" text="Browse">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="path" layoutX="719.0" layoutY="127.0" onAction="#setBrowse" prefHeight="38.0" prefWidth="353.0" />
-      <Button layoutX="838.0" layoutY="197.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="115.0" text="Add">
+      <TextField fx:id="path" layoutX="701.0" layoutY="42.0" onAction="#setBrowse" prefHeight="38.0" prefWidth="353.0" />
+      <Button layoutX="808.0" layoutY="127.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="115.0" text="Add">
          <font>
             <Font size="18.0" />
          </font>
