@@ -35,7 +35,7 @@ public class Manager {
         return thesis;
     }
 
-    public static void addResourcesInfo(File f){
+    public void addResourcesInfo(File f){
         String temp;
         String[] books = new String[4];
         String[] magazines = new String[4];

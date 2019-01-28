@@ -25,6 +25,7 @@ public class Controller3 {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Users File");
         Stage stage = new Stage();
+        fileChooser.getInitialDirectory().getAbsolutePath();
         fileChooser.showOpenDialog(stage);
     }
 

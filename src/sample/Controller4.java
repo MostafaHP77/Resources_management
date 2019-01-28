@@ -1,9 +1,12 @@
 package sample;
 
+import Data.User.Manager;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 //Add resource
 
@@ -15,7 +18,6 @@ public class Controller4 {
     public TextField path;
 
     public void setAdd() {
-
     }
 
     public void setBack() {
@@ -26,9 +28,8 @@ public class Controller4 {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
         Stage stage = new Stage();
-        fileChooser.showOpenDialog(stage);
-        path.setText(fileChooser.getInitialFileName());
-
+        File file = fileChooser.showOpenDialog(stage);
+        path.setText(file.getAbsolutePath());
     }
 }
 
