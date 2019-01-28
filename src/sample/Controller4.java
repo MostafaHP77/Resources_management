@@ -16,8 +16,9 @@ public class Controller4 {
     public Button add;
     public Button back;
     public TextField path;
-
+    public File file ;
     public void setAdd() {
+        Manager.getInstance().addResourcesInfo(file);
     }
 
     public void setBack() {
@@ -28,7 +29,7 @@ public class Controller4 {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
         Stage stage = new Stage();
-        File file = fileChooser.showOpenDialog(stage);
+        file = fileChooser.showOpenDialog(stage);
         path.setText(file.getAbsolutePath());
     }
 }
