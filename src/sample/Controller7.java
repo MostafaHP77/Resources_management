@@ -36,9 +36,10 @@ public class Controller7 {
 
 
     public void setResourcetype(){
-        resourcetype.getItems().addAll("Book","Magazine","Thesis","Map","Cd","Historical Document","Historical Picture");
+        if (resourcetype.getItems().isEmpty()) {
+            resourcetype.getItems().addAll("Book", "Magazine", "Thesis", "Map", "Cd", "Historical Document", "Historical Picture");
+        }else
         resourcetype.getItems().clear();
-
     }
 
     public File getResourcetype() {
@@ -56,7 +57,9 @@ public class Controller7 {
     }
 
     public void setUsertype(){
-        usertype.getItems().addAll("Student","Teacher","Guest");
+        if (usertype.getItems().isEmpty()) {
+            usertype.getItems().addAll("Student", "Teacher", "Guest");
+        }else
         usertype.getItems().clear();
     }
 

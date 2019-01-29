@@ -25,7 +25,9 @@ public class Controller6 {
     }
 
     public void setType() {
-        type.getItems().addAll("Student","Teacher","Geust");
+        if (type.getItems().isEmpty()) {
+            type.getItems().addAll("Student", "Teacher", "Geust");
+        }else
         type.getItems().clear();
     }
 

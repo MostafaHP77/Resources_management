@@ -29,13 +29,17 @@ public class Controller8 {
     public void setReturnresource() {
     }
 
-    public void setUsertype(){
-        usertype.getItems().addAll("Student","Teacher","Geust");
+    public void setUsertype() {
+        if (usertype.getItems().isEmpty()){
+            usertype.getItems().addAll("Student", "Teacher", "Geust");
+    }else
         usertype.getItems().clear();
     }
 
     public void setResourcetype() {
-        resourcetype.getItems().addAll("Book","Magazine","Thesis","Map","Cd","Historical Document","Historical Picture");
+        if (resourcetype.getItems().isEmpty()) {
+            resourcetype.getItems().addAll("Book", "Magazine", "Thesis", "Map", "Cd", "Historical Document", "Historical Picture");
+        }else
         resourcetype.getItems().clear();
     }
 
