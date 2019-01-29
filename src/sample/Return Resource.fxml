@@ -23,7 +23,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <ComboBox fx:id="usertype" layoutX="283.0" layoutY="126.0" onAction="#setUsertype" prefWidth="150.0" />
+      <ComboBox fx:id="usertype" layoutX="283.0" layoutY="126.0" onAction="#setUsertype" onMouseClicked="#setUsertype" prefWidth="150.0" />
       <TextField fx:id="usercode" layoutX="449.0" layoutY="112.0" prefHeight="48.0" prefWidth="290.0" promptText="Enter User code">
          <font>
             <Font size="19.0" />
@@ -38,7 +38,7 @@
             <InnerShadow />
          </effect>
       </Label>
-      <ComboBox fx:id="resourcetype" layoutX="290.0" layoutY="479.0" onAction="#setResourcetype" prefHeight="25.0" prefWidth="218.0" />
+      <ComboBox fx:id="resourcetype" layoutX="290.0" layoutY="479.0" onAction="#setResourcetype" onMouseClicked="#setResourcetype" prefHeight="25.0" prefWidth="218.0" />
       <Label layoutX="95.0" layoutY="471.0" prefHeight="19.0" prefWidth="181.0" text="Resource Type :">
          <font>
             <Font size="25.0" />

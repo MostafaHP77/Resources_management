@@ -11,11 +11,12 @@ public class Controller7 {
     public Button back;
     public Button lend;
     public Button search;
-    public ComboBox resourcetype;
+    public ComboBox<String> resourcetype;
     public ComboBox usertype;
     public TextField resourcename;
     public TextField usercode;
     public ListView list;
+
 
     public void setBack() {
         SceneManager.getInstance().loadScene("page2");
@@ -31,10 +32,12 @@ public class Controller7 {
 
 
     public void setResourcetype(){
+        resourcetype.getItems().addAll("Book","Magazine","Thesis","Map","Cd","Historical Document","Historical Picture");
 
     }
 
     public void setUsertype(){
+        usertype.getItems().addAll("Student","Teacher","Geust");
 
     }
 

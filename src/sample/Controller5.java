@@ -21,6 +21,6 @@ public class Controller5 {
     }
 
     public void setType() {
-
+        type.getItems().addAll("Book","Magazine","Thesis","Map","Cd","Historical Document","Historical Picture");
     }
 }

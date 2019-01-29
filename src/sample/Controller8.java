@@ -27,15 +27,14 @@ public class Controller8 {
     }
 
     public void setReturnresource() {
-
     }
 
     public void setUsertype(){
-
+        usertype.getItems().addAll("Student","Teacher","Geust");
     }
 
     public void setResourcetype() {
-
+        resourcetype.getItems().addAll("Book","Magazine","Thesis","Map","Cd","Historical Document","Historical Picture");
     }
 
     public void setList(){

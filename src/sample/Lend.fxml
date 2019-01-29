@@ -17,7 +17,7 @@
             <Image url="@../Picture/janko-ferlic-174927_1920x1080.jpg" />
          </image>
       </ImageView>
-      <ComboBox fx:id="resourcetype" layoutX="312.0" layoutY="74.0" onAction="#setResourcetype" prefHeight="47.0" prefWidth="260.0" />
+      <ComboBox fx:id="resourcetype" layoutX="312.0" layoutY="74.0" onAction="#setResourcetype" onMouseClicked="#setResourcetype" prefHeight="47.0" prefWidth="260.0" />
       <Label layoutX="117.0" layoutY="75.0" prefHeight="35.0" prefWidth="185.0" text="Resource Type :" textFill="WHITE">
          <font>
             <Font size="25.0" />
@@ -43,7 +43,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <ComboBox fx:id="usertype" layoutX="312.0" layoutY="158.0" onAction="#setUsertype" prefHeight="47.0" prefWidth="260.0" />
+      <ComboBox fx:id="usertype" layoutX="312.0" layoutY="158.0" onAction="#setUsertype" onMouseClicked="#setUsertype" prefHeight="47.0" prefWidth="260.0" />
       <Label layoutX="164.0" layoutY="161.0" prefHeight="36.0" prefWidth="139.0" text="User Type :" textFill="WHITE">
          <font>
             <Font size="25.0" />
