@@ -16,6 +16,9 @@ public class Manager {
     private ArrayList<Thesis> thesis = new ArrayList<>();
     private ArrayList<Member> member = new ArrayList<>();
 
+
+
+
     public static Manager getInstance() {
         return ourInstance;
     }
@@ -25,7 +28,18 @@ public class Manager {
     }
 
     public void setPass(String pass) {
-        this.password = pass;
+        PrintWriter input = null;
+        try{
+            input = new PrintWriter(
+                    new BufferedWriter(
+                            new FileWriter(
+                                    new File("pass.txt"))));
+                input.println(password);
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            input.close();
+        }
     }
 
     public ArrayList<Book> getBook() {
