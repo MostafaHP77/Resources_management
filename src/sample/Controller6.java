@@ -26,6 +26,7 @@ public class Controller6 {
 
     public void setType() {
         type.getItems().addAll("Student","Teacher","Geust");
+        type.getItems().clear();
     }
 
 }

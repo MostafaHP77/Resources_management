@@ -33,12 +33,12 @@ public class Controller7 {
 
     public void setResourcetype(){
         resourcetype.getItems().addAll("Book","Magazine","Thesis","Map","Cd","Historical Document","Historical Picture");
-
+        resourcetype.getItems().clear();
     }
 
     public void setUsertype(){
         usertype.getItems().addAll("Student","Teacher","Geust");
-
+        usertype.getItems().clear();
     }
 
 
